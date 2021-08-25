@@ -1,0 +1,5 @@
+.App {
+	display: grid;
+	grid-template-rows: auto minmax(calc(100vh - 120px), max-content) auto;
+	overflow: hidden;
+}

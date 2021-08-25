@@ -4,6 +4,7 @@ import { Route, Switch, HashRouter as Router } from 'react-router-dom'
 
 import { Navbar } from './components/Navbar'
 import { Contact, Favourites, Home, NotFound, Post, Posts } from './pages'
+import Footer from './components/Footer/Footer'
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route exact path='/contact' component={Contact} />
 					<Route exact component={NotFound} />
 				</Switch>
+				<Footer />
 			</div>
 		</Router>
 	)

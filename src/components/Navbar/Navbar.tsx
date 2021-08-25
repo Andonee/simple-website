@@ -7,7 +7,7 @@ import Nav from './Nav/Nav'
 
 const Navbar = () => {
 	return (
-		<div className='navbar'>
+		<nav className='navbar'>
 			<Logo />
 			<Nav />
 			<div className='navbar__burger' onClick={toggleNavbar}>
@@ -15,7 +15,7 @@ const Navbar = () => {
 				<div className='navbar__burger--line2'></div>
 				<div className='navbar__burger--line3'></div>
 			</div>
-		</div>
+		</nav>
 	)
 }
 
