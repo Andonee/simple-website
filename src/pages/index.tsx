@@ -1,0 +1,6 @@
+export { default as Home } from './Home/Home'
+export { default as NotFound } from './NotFound/NotFound'
+export { default as Post } from './Post/Post'
+export { default as Posts } from './Posts/Posts'
+export { default as Contact } from './Contact/Contact'
+export { default as Favourites } from './Favourites/Favourites'
