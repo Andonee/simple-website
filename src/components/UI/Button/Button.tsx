@@ -2,7 +2,7 @@ import './Button.scss'
 
 type ButtonProps = {
 	font?: number
-	onClick: () => void
+	onClick?: () => void
 	children: React.ReactNode
 }
 

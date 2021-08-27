@@ -7,7 +7,7 @@ type InputProps = {
 	value: string
 	placeholder: string
 	input?: string
-	onChange: (
+	onChange?: (
 		e:
 			| React.ChangeEvent<HTMLInputElement>
 			| React.ChangeEvent<HTMLTextAreaElement>

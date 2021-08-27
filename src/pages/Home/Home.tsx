@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom'
 import Jumbo from '../../components/UI/Jumbo/Jumbo'
 import PopularPosts from './PopularPosts/PopularPosts'
 import RecentPosts from './RecentPosts/RecentPosts'
-import AboutUs from './AboutUs/AboutUs'
 import { Button } from '../../components/UI'
 
 const Home = () => {
