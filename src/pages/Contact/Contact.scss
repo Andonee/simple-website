@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.contact {
+	margin: $page-margin;
+
+	&__img {
+		@include boxShadow;
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	&__content {
+		margin: 50px auto;
+		font-size: 1.2rem;
+		text-align: justify;
+		width: 90%;
+	}
+}
