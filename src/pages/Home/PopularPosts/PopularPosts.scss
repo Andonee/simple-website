@@ -1,0 +1,30 @@
+@import '../../../variables.scss';
+
+.popularPosts {
+	&__posts {
+		@media (min-width: $MD) {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+	}
+
+	&__stats {
+		margin-top: 100px;
+		border-top: 2px solid $main-color;
+		border-bottom: 2px solid $main-color;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		@media (min-width: $MD) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	@media (min-width: $MD) {
+		width: 100%;
+	}
+}

@@ -1,0 +1,26 @@
+@import '../../../variables.scss';
+
+.stats {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	border-bottom: 1px solid $main-color;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	&__amount {
+		font-size: 4rem;
+		font-weight: bold;
+		letter-spacing: 5px;
+		margin-top: 40px;
+	}
+
+	@media (min-width: $MD) {
+		& {
+			border-bottom: none;
+		}
+	}
+}

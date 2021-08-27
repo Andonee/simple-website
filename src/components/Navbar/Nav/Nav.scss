@@ -73,10 +73,11 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
-		max-width: 300px;
+		max-width: 400px;
 		transform: translateX(110%);
 		box-shadow: $box-shadow-left;
 		transition: all 0.3s ease-in;
+		z-index: 10;
 
 		&__links {
 			opacity: 0;

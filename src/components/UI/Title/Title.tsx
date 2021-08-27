@@ -1,11 +1,11 @@
 import './Title.scss'
 
-type titleType = {
+type TitleProps = {
 	title: string
 	size?: number
 }
 
-const Title = ({ title, size = 1.6 }: titleType) => {
+const Title = ({ title, size = 1.6 }: TitleProps) => {
 	return (
 		<h2 style={{ fontSize: `${size}rem` }} className='title'>
 			{title}

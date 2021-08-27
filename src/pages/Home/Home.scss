@@ -1,0 +1,12 @@
+@import '../../variables.scss';
+
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: $page-margin;
+
+	& button {
+		margin-top: 40px;
+	}
+}
