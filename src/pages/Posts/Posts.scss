@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.posts {
+	margin: $page-margin;
+
+	&__search {
+		margin: 0 auto;
+		width: fit-content;
+		width: 80%;
+		max-width: 400px;
+	}
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 50px;
+	}
+
+	@media (min-width: $MD) {
+		&__cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			justify-items: center;
+		}
+	}
+}
