@@ -9,10 +9,16 @@ import { Contact, Home, NotFound, Post, Posts } from './pages'
 import Footer from './components/Footer/Footer'
 import { ScrollToTop } from './utils'
 import { fetchPosts } from './store/posts/postsActions'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { StoreType } from './store/posts/postsReducerTypes'
+
+const getPosts = (state: StoreType) => state.data
 
 function App() {
 	const dispatch = useDispatch()
+	const posts = useSelector(getPosts)
+
+	console.log(posts)
 
 	useEffect(() => {
 		dispatch(fetchPosts())
@@ -22,13 +28,25 @@ function App() {
 			<ScrollToTop />
 			<div className='App'>
 				<Navbar />
-				<Switch>
-					<Route exact path='/' component={Home} />
-					<Route exact path='/articles' component={Posts} />
-					<Route exact path={`/articles/:id`} component={Post} />
-					<Route exact path='/contact' component={Contact} />
-					<Route exact component={NotFound} />
-				</Switch>
+				{posts.length ? (
+					<Switch>
+						<Route exact path='/' component={Home} />
+						<Route exact path='/articles' component={Posts} />
+						<Route exact path={`/articles/:id`} component={Post} />
+						<Route exact path='/contact' component={Contact} />
+						<Route exact component={NotFound} />
+					</Switch>
+				) : (
+					<div
+						style={{
+							fontSize: '2rem',
+							textAlign: 'center',
+							marginTop: '50px',
+						}}
+					>
+						There is nothing to show here :(
+					</div>
+				)}
 				<Footer />
 			</div>
 		</Router>
