@@ -17,8 +17,12 @@ const PopularPosts = () => {
 				{posts.slice(0, 3).map((post: SuccessType) => {
 					return (
 						<Card
+							key={post.id}
 							img='https://via.placeholder.com/400x250'
-							post={{ title: post.title, id: post.id }}
+							post={{
+								title: post.title,
+								id: post.id,
+							}}
 						/>
 					)
 				})}

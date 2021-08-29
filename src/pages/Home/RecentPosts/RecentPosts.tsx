@@ -19,8 +19,12 @@ const RecentPosts = () => {
 				{posts.slice(4, 10).map((post: SuccessType) => {
 					return (
 						<Card
+							key={post.id}
 							img='https://via.placeholder.com/400x250'
-							post={{ title: post.title, id: post.id }}
+							post={{
+								title: post.title,
+								id: post.id,
+							}}
 						/>
 					)
 				})}
