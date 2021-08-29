@@ -28,15 +28,6 @@ const Nav = () => {
 			</li>
 			<li className='nav__links'>
 				<NavLink
-					to='/favourites'
-					activeClassName='nav--active'
-					onClick={toggleNavbar}
-				>
-					Favourites
-				</NavLink>
-			</li>
-			<li className='nav__links'>
-				<NavLink
 					to='/contact'
 					activeClassName='nav--active'
 					onClick={toggleNavbar}
