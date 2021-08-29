@@ -1,15 +1,15 @@
 import './Comment.scss'
 
-const Comment = () => {
+type CommentProps = {
+	content: string
+	author: string
+}
+
+const Comment = ({ content, author }: CommentProps) => {
 	return (
 		<div className='comment'>
-			<p className='comment__content'>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores,
-				assumenda aliquid animi impedit asperiores obcaecati totam praesentium
-				quaerat temporibus, expedita quos dignissimos error. Tenetur veritatis
-				sequi laborum! Fugit, labore fugiat!
-			</p>
-			<p className='comment__author'>Some Author</p>
+			<p className='comment__content'>{content}</p>
+			<p className='comment__author'>{author}</p>
 		</div>
 	)
 }
