@@ -2,24 +2,26 @@ import './PopularPosts.scss'
 
 import { Title, Card } from '../../../components/UI'
 import Stats from '../Stats/Stats'
+import { useSelector } from 'react-redux'
+import { StoreType } from '../../../store/posts/postsReducerTypes'
+import { SuccessType } from '../../../store/posts/postsActionsTypes'
+
+const getPosts = (state: StoreType) => state.data
 
 const PopularPosts = () => {
+	const posts = useSelector(getPosts)
 	return (
 		<div className='popularPosts'>
 			<Title title='Popular Posts' />
 			<div className='popularPosts__posts'>
-				<Card
-					img='https://via.placeholder.com/400x250'
-					post={{ title: 'some title', id: '5' }}
-				/>
-				<Card
-					img='https://via.placeholder.com/400x250'
-					post={{ title: 'some title', id: '5' }}
-				/>
-				<Card
-					img='https://via.placeholder.com/400x250'
-					post={{ title: 'some title', id: '5' }}
-				/>
+				{posts.slice(0, 3).map((post: SuccessType) => {
+					return (
+						<Card
+							img='https://via.placeholder.com/400x250'
+							post={{ title: post.title, id: post.id }}
+						/>
+					)
+				})}
 			</div>
 
 			<div className='popularPosts__stats'>

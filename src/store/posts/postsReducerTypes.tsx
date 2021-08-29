@@ -1,7 +1,8 @@
 import { SuccessType } from './postsActionsTypes'
 
 export type StoreType = {
-  loading: boolean,
-  data: SuccessType[] | string,
-  error: SuccessType[] | string,
+	loading: boolean
+	// data: SuccessType[] | string,
+	data: any
+	error: SuccessType[] | string
 }
